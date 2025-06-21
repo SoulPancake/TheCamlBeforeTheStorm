@@ -1,0 +1,5 @@
+(library
+ (name ocamlfga)
+ (modules openfga types check)
+ (libraries yojson lwt ppx_deriving_yojson cohttp cohttp-lwt cohttp-lwt-unix)
+ (preprocess (pps ppx_deriving_yojson)))
