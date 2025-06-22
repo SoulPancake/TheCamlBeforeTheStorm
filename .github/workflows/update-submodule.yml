@@ -1,0 +1,31 @@
+name: Update Submodule
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  
+  workflow_dispatch:     
+
+jobs:
+  update-submodule:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout parent repo with submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update submodule to latest commit on main
+        run: |
+          cd ocamlfga  
+          git checkout main
+          git pull origin main
+          cd ..
+
+      - name: Commit and push updated submodule
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add folder-name
+          git commit -m "chore: auto-update submodule to latest commit" || echo "No changes to commit"
+          git push
