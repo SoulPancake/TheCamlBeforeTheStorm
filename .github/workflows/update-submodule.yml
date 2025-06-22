@@ -26,6 +26,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add folder-name
+          git add ocamlfga
           git commit -m "chore: auto-update submodule to latest commit" || echo "No changes to commit"
           git push
