@@ -1,4 +1,0 @@
-(executable
- (public_name ocamlfga)
- (name main)
- (libraries ocamlfga))

@@ -1,3 +1,0 @@
-(test
- (name test_ocamlfga)
- (libraries ocamlfga lwt yojson ppx_deriving_yojson))
