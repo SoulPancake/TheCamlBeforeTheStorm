@@ -8,6 +8,9 @@ run:
 		./hello $(name); \
 	fi
 
+run-wordfreq:
+	cd wordfreq && dune exec bin/main.exe
+
 clean:
 	rm -f hello
 	rm -f *.cmi
