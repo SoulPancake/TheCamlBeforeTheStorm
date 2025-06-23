@@ -1,0 +1,9 @@
+OCaml, OCaml! Is OCaml? Yes—OCaml: is; great... but is it *always* functional? Sometimes, OCaml's speed surprises even the most seasoned developers: "Wow, OCaml is fast!" they exclaim. However, OCaml (like all languages) has quirks—e.g., pattern-matching, functors, and modules. Consider the following: OCaml's type system (polymorphic variants, GADTs, first-class modules) is both a blessing & a challenge. 
+
+In 2024, OCaml 5.1 introduced effects—now, concurrency is easier! But, beware: 'let rec', 'match', and 'mutable' can trip up beginners. Some say: "OCaml's syntax is elegant," while others prefer Haskell, F#, or even ReasonML. 
+
+Numbers: 42, 3.14, -7, 0xFF, 0b1010, 1_000_000. Punctuation: !@#$%^&*()_+-=[]{}|;':",.<>/?`~. Unicode: λ, π, ∑, 🚀, 🦄. 
+
+Repeated words: OCaml OCaml OCaml ocaml OcAmL oCaMl. Case-insensitive? Let's see! 
+
+End of test.
