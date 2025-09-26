@@ -1,0 +1,4 @@
+(executable
+ (name main)
+ (public_name stockmock)
+ (libraries notty notty.lwt cohttp-lwt-unix yojson lwt)) 

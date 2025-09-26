@@ -1,0 +1,8 @@
+(lang dune 3.11)
+(name stockmock)
+(generate_opam_files true)
+(package
+ (name stockmock)
+ (synopsis "TUI Stock Viewer")
+ (description "A TUI app to view stock prices and graphs.")
+ (depends ocaml notty cohttp-lwt-unix yojson lwt)) 
