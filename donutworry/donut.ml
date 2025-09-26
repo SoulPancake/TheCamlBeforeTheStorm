@@ -13,9 +13,8 @@ let output = Array.make buffer_size ' '
 
 let luminance = [| '.'; ','; '-'; '~'; ':'; ';'; '='; '!'; '*'; '#'; '$'; '@' |]
 
+let clear_screen () = print_string "\027[H\027[2J"
 
-let clear_screen () =
-  print_string "\027[2J\027[H"
 
 let render_frame () =
   Array.fill z 0 buffer_size 0.0;
@@ -69,13 +68,14 @@ let render_frame () =
     print_char output.(i)
   done;
 
-  flush_all ();
+  flush Pervasives.stdout;
   a := !a +. 0.04;
   b := !b +. 0.02;
   Unix.sleepf 0.03
 
 let () =
   while true do
-    render_frame ()
+    render_frame ();
+    flush_all ();
+    Unix.sleepf 0.03
   done
-
